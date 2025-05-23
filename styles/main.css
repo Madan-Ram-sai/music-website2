@@ -1,0 +1,309 @@
+.introduction{
+  display: flex;
+  
+}
+.left-side{
+    flex:1;
+    background-color: rgb(249, 120, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-side p{
+  font-size: 70px;
+  font-family:"Playwrite DK Loopet", Arial;
+  text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  color: white;
+}
+.platform-name{
+  font-size: 70px;
+  font-family:"Playwrite DK Loopet", Arial;
+  color: lightgreen;
+  text-shadow: 
+  -1px -1px 0 black,  
+    1px -1px 0 black,
+  -1px  1px 0 black,
+    1px  1px 0 black;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.caption{
+  font-family: cursive;
+  color: #010468;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.introduction .left-side a {
+  background-color: rgb(241, 63, 229);
+  border: 1px solid;
+  border-radius: 17px;
+  height: 32px;
+  font-weight: 400;
+  padding: 9px 3px 0px 3px;
+  font-family: Roboto;
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+  transition: box-shadow 0.12s;
+  transition: opacity 0.12s;
+}
+.feature-button{
+  margin-bottom: 10px;
+}
+.feature-button:hover{
+  cursor: pointer; 
+  opacity: 0.7;
+  box-shadow: 5px 5px 7px rgba(0,0,0,0.2);
+}
+.right-side{
+  flex:1;
+  background-color: rgb(249, 120, 234);
+  display: flex;
+  align-items: center;
+}
+.for-svg svg {
+  width: 100%;       /* Make SVG responsive */
+  height: 100%;      /* Preserve aspect ratio */
+  max-width: 400px;  /* limit max size */
+}
+#hand {
+  transform-origin: 420px 270px;
+  animation: wave-hand 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+#symbol1, #symbol2, #symbol3 {
+  transform-origin: center;
+  animation: pulse-beat 1.9s ease-in-out infinite;
+}
+
+#symbol1 { animation-delay: 0s; }
+#symbol2 { animation-delay: 0.3s; }
+#symbol3 { animation-delay: 0.6s; }
+
+@keyframes pulse-beat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+.feature-playlist{
+  padding-left: 5px;
+}
+section h1{
+  font-size: 50px;
+  font-family: 'Lucida Sans', sans-serif;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+.sub-title{
+  font-size: 20px;
+}
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.cards-container .card{
+  flex: 1 1 calc(33.33% - 30px);/* this is regarding last flex box i.e cards-container*/
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 6px;
+  padding: 10px;
+  background-color: rgb(239, 236, 236);
+  max-width: 254px;
+  position: relative;
+}
+.playlist-images{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid black;
+}
+@media (max-width: 900px) {
+  .cards-container .card {
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
+    max-width: 254px;
+  }
+  .cards-container{
+  justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container .card {
+    flex: 1 1 100%; /* 1 per row */
+     max-width: 254px;
+  }
+  .cards-container{
+  justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-container .card{
+  flex: 1 1 calc(33.33% - 20px);/* this is regarding last flex box i.e cards-container*/
+  max-width: 254px;
+  }
+  .cards-container{
+    justify-content: center;
+  }
+}
+.cards-container .card p1{
+  font-family: sans-serif;
+  margin-bottom: 9px;
+  color: rgb(246, 101, 23);
+}
+.cards-container .card p{
+  font-family: sans-serif ;
+  font-size: small;
+  margin-top: 10px;
+}
+.num-songs{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgb(31, 30, 30);
+  color: white;
+  padding: 2px;
+}
+
+.Albums{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  text-wrap: nowrap;
+}
+.search-bar{
+  height: 30px;
+  max-width: 500px;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+.search-bar::placeholder{
+  padding-left: 5px;
+}
+.albums-container{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.albums-container .card{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: rgb(239, 236, 236);
+  text-wrap: wrap;
+  max-width: 300px;
+}
+.albums-container .card img{
+  width: 50px;
+  object-fit: cover;
+  border: 1px solid black;
+}
+.albums-container .card label{
+  color: blue;
+  cursor: pointer;
+  text-align: right;
+}
+.albums-container .card input{
+  display: none;
+}
+
+.more-content{
+  max-height: 0px ;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.albums-container .card input[type="checkbox"]:checked ~ .more-content{
+  max-height: 300px;
+}
+.albums-container .card input[type="checkbox"]:checked~ label{
+  display: none;
+}
+/* 
+.albums-container .card input[type="checkbox"]:checked ~ .albums-container .card .more-content{
+  max-height: 100px;
+} 
+see this will not work bez "actual address/ location ..then-condition..and (on what it do something) i.e target 
+*/
+.userReviews{
+  margin-left: 10px;
+}
+.review-form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  max-width: 600px;
+  padding: 8px;
+}
+.review-form input,
+.review-form textarea{
+  padding: 5px;
+  border: 1px solid rgb(162, 159, 159);
+  border-radius: 3px;
+  height: 1.5rem;
+}
+.review-form button{
+  background-color: rgb(40, 167, 69);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  height: 1.7rem;
+}
+.review-form button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+footer{
+  margin-top: 100px;
+  /* height: 100px; */
+  background-color: rgba(0, 0, 0, 0.871);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p{
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+footer a{
+  text-decoration: none;
+  color: rgba(37, 125, 239, 0.774);
+}
+.hyperlinks-container{
+  display: flex;
+  gap: 1.5rem;
+  padding: 10px;
+  align-items: center;
+}
+footer .hyperlinks{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+}

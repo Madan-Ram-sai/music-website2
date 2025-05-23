@@ -1,0 +1,43 @@
+.expand-box {
+  width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #f9f9f9;
+  position: relative;
+}
+.toggle-label {
+  /* display: inline-block; */
+  margin-top: 5px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+   display: none; 
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+input[type="checkbox"]:checked ~ .box .more-content {
+  max-height: 200px; /* Adjust depending on your content */
+}
+
+.show-less {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .show-more {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .show-less {
+  display: inline-block;
+}
